@@ -4,7 +4,12 @@ Instead of updating every single file and checking if everything is correct, you
 constant right here. The only caveat is that for each php file, you MUST include/require this file `constants.php`. This is 
 best done by referring up N number of directories until you can navigate to this file. e.g. `require '../../utils/constants.php'`
 where the php file that is doing the requiring, needs to navigate up two directories to the project root, to then specify
-this `utils/constants.php` file. */
+this `utils/constants.php` file. 
+
+NOTE: If you create a soft link inside of XAMPP/htdocs, you MUST ensure the name of the soft link is the name of the 
+PROJECT_WORKSPACE constant. Only in this case, does the name of this project's folder not matter and instead, the soft
+link name matters. 
+*/
 define('PROJECT_WORKSPACE', 'CS268GroupProjectGroup10');
 
 define('PATH_SECRETS', $_SERVER['DOCUMENT_ROOT'] . '/' . PROJECT_WORKSPACE . '/secrets/secrets.php');
