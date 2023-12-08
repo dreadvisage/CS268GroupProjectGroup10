@@ -1,15 +1,7 @@
 <?php
+require_once 'constants.php';
 
-
-/* The 'DOCUMENT_ROOT' for XAMPP is .../XAMPP/htdocs . But we need to follow the symlink we created. 
-So we add on /project . Then wherever the 'project' folder is, we go up one directory. And then we are
-able to access the required folder from our project root. We do this because not every file that 
-includes/requires this php file, has the same amount of directories to navigate. So instead, we just 
-use PHP's built-in tools to navigate from the 'DOCUMENT_ROOT' instead which is always a uniform distance.*/
-$config_path = $_SERVER['DOCUMENT_ROOT'];
-$config_path .= "/project/../utils/config.php";
-
-require_once $config_path;
+require_once PATH_CONFIG;
 
 $query = "SELECT * FROM default_pfps";
 $results = $mysqli->query($query);

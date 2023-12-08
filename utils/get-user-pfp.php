@@ -1,7 +1,7 @@
 <?php 
-$config_path = $_SERVER['DOCUMENT_ROOT'];
-$config_path .= "/project/../utils/config.php";
-require_once $config_path;
+require_once 'constants.php';
+
+require_once PATH_CONFIG;
 
 function getUserPfp() {
     global $mysqli;

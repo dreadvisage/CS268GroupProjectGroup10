@@ -1,9 +1,8 @@
 <?php
-$is_logged_in_path = $_SERVER['DOCUMENT_ROOT'];
-$is_logged_in_path .= "/project/../utils/is-logged-in.php";
-require_once $is_logged_in_path;
+require_once 'constants.php';
 
-require_once 'get-user-pfp.php';
+require_once PATH_IS_LOGGED_IN;
+require_once PATH_GET_USER_PFP;
 
 function getDirsUp($num_dirs_up) {
     $dirs_up = "";
